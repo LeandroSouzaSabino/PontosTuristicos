@@ -1,0 +1,16 @@
+<po-page-default
+    p-title="Cadastro de Paises">
+    <po-button 
+        class="po-sm-6 po-md-4 po-lg-2 po-xl-2"
+        p-label="Cadastrar novo pais"
+        (p-click)="navegarParaCadastro()">
+    </po-button>
+    <po-table
+        class="po-sm-12 po-pt-2"
+        p-container="true"
+        [p-actions-right]="true"
+        [p-actions]="lsActions"
+        [p-columns]="lsColumns"
+        [p-items]="lsPaises">
+    </po-table>
+</po-page-default>

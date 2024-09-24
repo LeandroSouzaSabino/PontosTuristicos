@@ -1,0 +1,17 @@
+<po-info p-label="Comentario" p-value=""> </po-info>
+
+<div class="po-row">
+  <po-button-group class="po-md-12" [p-buttons]="topButtons"> </po-button-group>
+</div>
+
+<po-table
+  [p-auto-collapse]="true"
+  [p-columns]="lsColumns"
+  [p-hide-columns-manager]="true"
+  [p-hide-table-search]="false"
+  [p-items]="lsComentarios"
+  [p-sort]="true"
+  [p-striped]="true"
+  [p-actions]="lsActions"
+  [p-actions-right]="true"
+></po-table>

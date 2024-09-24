@@ -1,0 +1,78 @@
+<po-info p-label="Formulário de Manipulação do Cadastro de pontos Turisticos " [p-value]="observacao"> </po-info>
+
+<div class="po-row">
+    <po-button-group class="po-md-6" [p-buttons]="actionButtons"> </po-button-group>
+</div>
+
+<hr />
+
+<div class="po-row">
+    <div class="po-md-3">
+        <po-input 
+            name="idpontoturistico" 
+            p-label="Código do ponto Turistico" 
+            p-required="true" 
+            [p-show-required]="true" 
+            p-upper-case="true" 
+            [(ngModel)]="idpontoturistico"
+            [p-maxlength]="4"> 
+        </po-input>
+    </div>
+
+    <div class="po-md-3">
+        <po-input 
+            name="Pais" 
+            p-label="Pais" 
+            p-required="true" 
+            [p-show-required]="true" 
+            [(ngModel)]="Pais"
+            [p-maxlength]="30"> 
+        </po-input>
+    </div>
+
+    <div class="po-md-6"></div>
+        <po-input 
+            name="Cidade" 
+            p-label="Cidade" 
+            p-required="true" 
+            [p-show-required]="true" 
+            [(ngModel)]="Cidade"
+            [p-maxlength]="30"> 
+        </po-input>
+    </div>
+</div>
+
+<div class="po-row">
+    <div class="po-md-6">
+        <po-input 
+            name="pontoturistico" 
+            p-label="Nome do Ponto Turistico" 
+            p-required="true" 
+            [p-show-required]="true" 
+            [(ngModel)]="pontoturistico"
+            [p-maxlength]="60"> 
+        </po-input>
+    </div>
+
+    <div class="po-md-6">
+        <po-combo 
+            name="estacao" 
+            [ngModel]="estacao"
+            (ngModel)="estacao"
+            (p-change)="onChangeStatus($event)"
+            p-label="Estação do Ano" 
+            [p-options]="[{value: '1', label: 'Verão'}, {value: '2', label: 'Outono'}, {value: '3', label: 'Inverno'}, {value: '4', label: 'Primavera'}]">
+        </po-combo>
+    </div>
+</div>
+
+<div class="po-row">
+    <po-input 
+        name="Resumo" 
+        p-label="Resumo" 
+        p-required="true" 
+        [p-show-required]="true" 
+        [(ngModel)]="Resumo"
+        [p-maxlength]="120"> 
+    </po-input>
+</div>
